@@ -18,6 +18,7 @@ MANIFEST.MF
 pom.properties
 .classpath
 .project
+.settings
 
 # External tool builders
 .externalToolBuilders/
