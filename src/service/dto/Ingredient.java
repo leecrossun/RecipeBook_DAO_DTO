@@ -1,4 +1,4 @@
-
+package service.dto;
 public class Ingredient {
 	private String ingredientId;
 	private String ingredientName;

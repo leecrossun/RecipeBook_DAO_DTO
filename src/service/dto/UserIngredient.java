@@ -1,3 +1,4 @@
+package service.dto;
 import java.util.Date;
 
 public class UserIngredient {

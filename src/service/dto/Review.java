@@ -1,4 +1,4 @@
-
+package service.dto;
 public class Review {
 	private String userId;
 	private String recipeId;

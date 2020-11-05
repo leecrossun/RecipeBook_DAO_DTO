@@ -1,4 +1,4 @@
-
+package service.dto;
 public class RecipeStep {
 	private String recipeId;
 	private int stepNum;
