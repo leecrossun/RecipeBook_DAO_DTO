@@ -1,4 +1,4 @@
-
+package service.dto;
 public class RecipeIngredient {
 	private String recipeId;
 	private String ingredientId;
