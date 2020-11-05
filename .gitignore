@@ -16,7 +16,8 @@ local.properties
 target/
 MANIFEST.MF
 pom.properties
-
+.classpath
+.project
 
 # External tool builders
 .externalToolBuilders/
