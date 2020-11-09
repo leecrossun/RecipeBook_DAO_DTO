@@ -20,7 +20,16 @@ public class Recipe {
 	      this.image = image;
 	      this.report = report;
 	   }
-	   public String getRecipeId() {
+	   
+	   
+	   public Recipe(String recipeName, String summary) {
+		super();
+		this.recipeName = recipeName;
+		this.summary = summary;
+	}
+
+
+	public String getRecipeId() {
 	      return recipeId;
 	   }
 	   public void setRecipeId(String recipeId) {

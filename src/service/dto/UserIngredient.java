@@ -3,17 +3,25 @@ import java.util.Date;
 
 public class UserIngredient {
 	private String userId;
+	private String ingredientName;
 	private String ingredientId;
 	private int amount;
 	private String unit;
 	private Date expireDate;
 	
-	public UserIngredient(String userId, String ingredientId, int amount, String unit, Date expireDate) {
-		this.userId = userId;
-		this.ingredientId = ingredientId;
+	public UserIngredient(String ingredientName, int amount, String unit,
+			Date expireDate) {
+		super();
+		this.ingredientName = ingredientName;
 		this.amount = amount;
 		this.unit = unit;
 		this.expireDate = expireDate;
+	}
+	public String getIngredientName() {
+		return ingredientName;
+	}
+	public void setIngredientName(String ingredientName) {
+		this.ingredientName = ingredientName;
 	}
 	public String getUserId() {
 		return userId;
