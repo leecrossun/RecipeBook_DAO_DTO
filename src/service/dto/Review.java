@@ -37,7 +37,6 @@ public class Review {
 		this.reviewId = reviewId;
 		this.userId = userId;
 		this.recipeId = recipeId;
-		this.recipeName = recipeName;
 		this.content = content;
 		this.rating = rating;
 		this.published = published;
@@ -54,7 +53,7 @@ public class Review {
 	}
 
 
-	public Timestamp getPublished() {
+	public Date getPublished() {
 		return published;
 	}
 
