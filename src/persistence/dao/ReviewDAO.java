@@ -77,6 +77,49 @@ public class ReviewDAO {
 		}
 	}
 	
+	// 리뷰 삭제
+	public static void deleteMyReview(Review review) {
+		
+		String sql = "DELETE FROM REVIEW WHERE REVIEWID = ?";
+		Object[] param = new Object[] {review.getReviewId()};
+		jdbcUtil.setSqlAndParameters(sql, param);
+		try {				
+			int result = jdbcUtil.executeUpdate();
+			if (result > 0)
+				System.out.println("deleteReview success");
+			else
+				System.out.println("deleteReview failed");
+		} catch (Exception ex) {
+			jdbcUtil.rollback();
+			ex.printStackTrace();
+		}
+		finally {
+			jdbcUtil.commit();
+			jdbcUtil.close();	// resource 반환
+		}	
+	}
+	
+	// 리뷰 수정
+	public static void updateMyReview(Review review) {
+		String sql = "UPDATE REVIEW SET CONTENT = ? , RATING = ?, PUBLISHED = ? WHERE REVIEWID = ?";
+		Object[] param = new Object[] {review.getContent(), review.getRating(), review.getPublished(), review.getReviewId()};
+		jdbcUtil.setSqlAndParameters(sql, param);
+		try {				
+			int result = jdbcUtil.executeUpdate();
+			if (result > 0)
+				System.out.println("updateReview success");
+			else
+				System.out.println("updateReview failed");
+		} catch (Exception ex) {
+			jdbcUtil.rollback();
+			ex.printStackTrace();
+		}
+		finally {
+			jdbcUtil.commit();
+			jdbcUtil.close();	// resource 반환
+		}		 
+	}
+	
 	// 레시피 별로 리뷰 검색
 	public static List<Review> findReviewByRecipeId(String recipeId) {
 		String sql = "SELECT * FROM REVIEW WHERE RECIPEID = ?";
