@@ -11,11 +11,12 @@ public class Recipe {
 	private int report;
 
 
-	public Recipe(String recipeId, String recipeName, String summary, String nation, String difficulty, String image,
+	public Recipe(String recipeId, String recipeName, String userId, String summary, String nation, String difficulty, String image,
 			int report) {
 		super();
 		this.recipeId = recipeId;
 		this.recipeName = recipeName;
+		this.userId = userId;
 		this.summary = summary;
 		this.nation = nation;
 		this.difficulty = difficulty;
