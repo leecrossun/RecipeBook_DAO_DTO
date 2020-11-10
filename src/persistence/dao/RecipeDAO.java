@@ -194,6 +194,7 @@ public class RecipeDAO {
 			}
 		}
 	}
+	
 	public static void deleteRecipeStep (String recipeId) {
 		String sql = "DELETE FROM RECIPESTEP WHERE recipeID = ?";
 		jdbcUtil.setSqlAndParameters(sql, new Object[] {recipeId});
@@ -221,7 +222,6 @@ public class RecipeDAO {
 			jdbcUtil.close();
 		}
 	}
-
 
 	// 재료명으로 레시피 DTO 반환 (검색기능)
 	public static List<Recipe> getRecipeListByIngredient(List<Ingredient> ingredientList) {
@@ -255,6 +255,8 @@ public class RecipeDAO {
 				rcp.setReport(rs.getInt("report"));
 				rcpList.add(rcp);
 			}
+			if (rcpList.isEmpty())
+				System.out.println("empty recipe");
 			return rcpList;				
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -286,6 +288,8 @@ public class RecipeDAO {
 				rcp.setReport(rs.getInt("report"));
 				rcpList.add(rcp);
 			}
+			if (rcpList.isEmpty())
+				System.out.println("empty refrigerator");
 			return rcpList;				
 		} catch (Exception ex) {
 			ex.printStackTrace();
