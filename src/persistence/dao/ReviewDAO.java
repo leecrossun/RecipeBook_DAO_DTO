@@ -36,10 +36,11 @@ public class ReviewDAO {
 				list.add(myReview);
 			}
 			
-			if (list != null)
-				System.out.println("findReviewByUserID success");
-			else
+			if (list.isEmpty())
 				System.out.println("findReviewByUserID failed");
+			else
+				System.out.println("findReviewByUserID success");
+				
 			
 			return list;
 			
@@ -137,10 +138,10 @@ public class ReviewDAO {
 				list.add(myReview);
 			}
 			
-			if (list != null)
-				System.out.println("findReviewByUserID success");
-			else 
-				System.out.println("findReviewByUserID failed");
+			if (list.isEmpty())
+				System.out.println("findReviewByRecipeID failed");
+			else
+				System.out.println("findReviewByRecipeId success");
 			
 			return list;
 			
